@@ -1,0 +1,383 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-principal: #173f6b;
+    --color-secundario: #255d91;
+    --color-fondo: #f4f7fb;
+    --color-blanco: #ffffff;
+    --color-texto: #1f2937;
+    --color-texto-suave: #64748b;
+    --color-borde: #d7dee8;
+    --color-tabla: #eef3f8;
+    --color-hover: #e6eef7;
+    --color-exito: #198754;
+    --color-alerta: #d97706;
+    --color-error: #b42318;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+header {
+    background: linear-gradient(
+        135deg,
+        var(--color-principal),
+        var(--color-secundario)
+    );
+
+    color: var(--color-blanco);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+header p {
+    margin: 4px 0;
+    font-size: 15px;
+}
+
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+
+main {
+    width: 92%;
+    max-width: 1200px;
+    margin: 25px auto;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+section {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+
+    padding: 22px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    color: var(--color-principal);
+    font-size: 21px;
+    margin-bottom: 18px;
+
+    border-bottom: 2px solid var(--color-principal);
+    padding-bottom: 8px;
+}
+
+
+/* =========================
+   FORMULARIOS
+========================= */
+
+section div {
+    margin-bottom: 14px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+
+    background-color: var(--color-blanco);
+
+    font-size: 14px;
+    color: var(--color-texto);
+
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--color-secundario);
+    outline: none;
+
+    box-shadow: 0 0 0 3px rgba(37, 93, 145, 0.12);
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* =========================
+   TABLA DE RÚBRICA
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+th,
+td {
+    border: 1px solid var(--color-borde);
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    font-size: 14px;
+}
+
+td {
+    font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--color-tabla);
+}
+
+tbody tr:hover {
+    background-color: var(--color-hover);
+}
+
+table select,
+table input {
+    margin: 0;
+}
+
+
+/* =========================
+   RESULTADO DE EVALUACIÓN
+========================= */
+
+#nota-final,
+#nivel-global {
+    color: var(--color-principal);
+    font-size: 22px;
+}
+
+section p {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+button {
+    border: none;
+    border-radius: 6px;
+
+    padding: 11px 18px;
+    margin: 5px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* CALCULAR */
+
+#btn-calcular {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+#btn-calcular:hover {
+    background-color: var(--color-secundario);
+}
+
+
+/* NUEVA EVALUACIÓN */
+
+#btn-limpiar {
+    background-color: #6c757d;
+    color: var(--color-blanco);
+}
+
+#btn-limpiar:hover {
+    background-color: #555d63;
+}
+
+
+/* GENERAR PDF */
+
+#btn-pdf {
+    background-color: var(--color-exito);
+    color: var(--color-blanco);
+}
+
+#btn-pdf:hover {
+    background-color: #146c43;
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+footer {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+
+    text-align: center;
+
+    padding: 18px;
+    margin-top: 30px;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   ADAPTACIÓN A TABLET
+========================= */
+
+@media screen and (max-width: 900px) {
+
+    main {
+        width: 96%;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+}
+
+
+/* =========================
+   ADAPTACIÓN A MÓVIL
+========================= */
+
+@media screen and (max-width: 700px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    header p {
+        font-size: 13px;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    section h2 {
+        font-size: 18px;
+    }
+
+
+    /* Tabla desplazable */
+
+    section:has(table) {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 850px;
+    }
+
+
+    /* Botones */
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+}
+
+
+/* =========================
+   ESTILOS PARA IMPRESIÓN
+========================= */
+
+@media print {
+
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    header {
+        background: white;
+        color: black;
+        border-bottom: 2px solid black;
+    }
+
+    main {
+        width: 100%;
+        margin: 0;
+    }
+
+    section {
+        box-shadow: none;
+        border: none;
+        padding: 10px 0;
+    }
+
+    button {
+        display: none;
+    }
+
+    footer {
+        background: white;
+        color: black;
+        border-top: 1px solid black;
+    }
+
+    table {
+        page-break-inside: avoid;
+    }
+
+}

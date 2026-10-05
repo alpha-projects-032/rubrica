@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Evaluación de Pseudocódigo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Evaluación de Ejercicios de Pseudocódigo</h1>
+        <p>Fundamentos de Programación</p>
+        <p>Rúbrica de evaluación - Puntaje total: 10 puntos</p>
+    </header>
+
+    <main>
+
+        <!-- DATOS DEL ESTUDIANTE -->
+        <section>
+
+            <h2>Datos del estudiante</h2>
+
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    required
+                >
+            </div>
+
+            <div>
+                <label for="apellido">Apellido:</label>
+                <input
+                    type="text"
+                    id="apellido"
+                    name="apellido"
+                    required
+                >
+            </div>
+
+            <div>
+                <label for="fecha">Fecha:</label>
+                <input
+                    type="date"
+                    id="fecha"
+                    name="fecha"
+                >
+            </div>
+
+        </section>
+
+
+        <!-- EJERCICIO -->
+        <section>
+
+            <h2>Ejercicio evaluado</h2>
+
+            <label for="ejercicio">Seleccione el ejercicio:</label>
+
+            <select id="ejercicio" name="ejercicio">
+
+                <option value="">Seleccione...</option>
+
+                <optgroup label="Ingeniería Civil">
+
+                    <option value="1">
+                        1. Área de una losa rectangular
+                    </option>
+
+                    <option value="2">
+                        2. Volumen de concreto
+                    </option>
+
+                    <option value="3">
+                        3. Cantidad de bloques para una pared
+                    </option>
+
+                    <option value="4">
+                        4. Costo de construcción de un muro
+                    </option>
+
+                    <option value="5">
+                        5. Perímetro de un terreno
+                    </option>
+
+                    <option value="6">
+                        6. Conversión de unidades
+                    </option>
+
+                    <option value="7">
+                        7. Pendiente de una carretera
+                    </option>
+
+                    <option value="8">
+                        8. Clasificación de pendiente
+                    </option>
+
+                    <option value="9">
+                        9. Presupuesto de materiales
+                    </option>
+
+                    <option value="10">
+                        10. Desperdicio de materiales
+                    </option>
+
+                    <option value="11">
+                        11. Carga sobre una columna
+                    </option>
+
+                    <option value="12">
+                        12. Control de presupuesto
+                    </option>
+
+                    <option value="13">
+                        13. Cálculo para varias viviendas
+                    </option>
+
+                    <option value="14">
+                        14. Registro de tramos de carretera
+                    </option>
+
+                </optgroup>
+
+
+                <optgroup label="Ingeniería Eléctrica">
+
+                    <option value="15">
+                        15. Ley de Ohm
+                    </option>
+
+                    <option value="16">
+                        16. Cálculo de voltaje
+                    </option>
+
+                    <option value="17">
+                        17. Potencia eléctrica
+                    </option>
+
+                    <option value="18">
+                        18. Consumo energético
+                    </option>
+
+                    <option value="19">
+                        19. Costo de energía
+                    </option>
+
+                    <option value="20">
+                        20. Verificación de sobrecarga
+                    </option>
+
+                    <option value="21">
+                        21. Caída de tensión
+                    </option>
+
+                    <option value="22">
+                        22. Eficiencia de un motor
+                    </option>
+
+                    <option value="23">
+                        23. Evaluación de eficiencia
+                    </option>
+
+                    <option value="24">
+                        24. Consumo de luminarias
+                    </option>
+
+                    <option value="25">
+                        25. Comparación de tecnologías de iluminación
+                    </option>
+
+                    <option value="26">
+                        26. Monitoreo de voltaje
+                    </option>
+
+                    <option value="27">
+                        27. Sistema de alerta eléctrica
+                    </option>
+
+                </optgroup>
+
+
+                <optgroup label="Ingeniería Industrial">
+
+                    <option value="28">
+                        28. Producción diaria
+                    </option>
+
+                    <option value="29">
+                        29. Productividad laboral
+                    </option>
+
+                    <option value="30">
+                        30. Porcentaje de productos defectuosos
+                    </option>
+
+                    <option value="31">
+                        31. Control de calidad
+                    </option>
+
+                    <option value="32">
+                        32. Costo de producción
+                    </option>
+
+                    <option value="33">
+                        33. Costo unitario
+                    </option>
+
+                    <option value="34">
+                        34. Punto de reorden de inventario
+                    </option>
+
+                    <option value="35">
+                        35. Control de inventario
+                    </option>
+
+                    <option value="36">
+                        36. Registro de producción semanal
+                    </option>
+
+                    <option value="37">
+                        37. Mejor día de producción
+                    </option>
+
+                    <option value="38">
+                        38. Evaluación de trabajadores
+                    </option>
+
+                    <option value="39">
+                        39. Control de lotes
+                    </option>
+
+                    <option value="40">
+                        40. Sistema de análisis de una planta - Reto integrador
+                    </option>
+
+                </optgroup>
+
+            </select>
+
+        </section>
+
+
+        <!-- RÚBRICA -->
+        <section>
+
+            <h2>Rúbrica de evaluación</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Criterio</th>
+                        <th>Valor</th>
+                        <th>Nivel</th>
+                        <th>Puntaje</th>
+                        <th>Observación</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            Análisis: entradas, proceso y salidas
+                        </td>
+
+                        <td>
+                            1.5
+                        </td>
+
+                        <td>
+
+                            <select
+                                id="nivel-analisis"
+                                name="nivel-analisis"
+                            >
+
+                                <option value="">
+                                    Seleccione...
+                                </option>
+
+                                <option value="excelente">
+                                    Excelente
+                                </option>
+
+                                <option value="satisfactorio">
+                                    Satisfactorio
+                                </option>
+
+                                <option value="proceso">
+                                    En proceso
+                                </option>
+
+                                <option value="insuficiente">
+                                    Insuficiente
+                                </option>
+
+                            </select>
+
+                        </td>
+
+                        <td id="puntaje-analisis">
+                            0.00
+                        </td>
+
+                        <td>
+
+                            <input
+                                type="text"
+                                id="observacion-analisis"
+                                name="observacion-analisis"
+                            >
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Lógica y secuencia del algoritmo
+                        </td>
+
+                        <td>
+                            2.5
+                        </td>
+
+                        <td>
+
+                            <select
+                                id="nivel-logica"
+                                name="nivel-logica"
+                            >
+
+                                <option value="">
+                                    Seleccione...
+                                </option>
+
+                                <option value="excelente">
+                                    Excelente
+                                </option>
+
+                                <option value="satisfactorio">
+                                    Satisfactorio
+                                </option>
+
+                                <option value="proceso">
+                                    En proceso
+                                </option>
+
+                                <option value="insuficiente">
+                                    Insuficiente
+                                </option>
+
+                            </select>
+
+                        </td>
+
+                        <td id="puntaje-logica">
+                            0.00
+                        </td>
+
+                        <td>
+
+                            <input
+                                type="text"
+                                id="observacion-logica"
+                                name="observacion-logica"
+                            >
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Estructuras de control
+                        </td>
+
+                        <td>
+                            2.0
+                        </td>
+
+                        <td>
+
+                            <select
+                                id="nivel-control"
+                                name="nivel-control"
+                            >
+
+                                <option value="">
+                                    Seleccione...
+                                </option>
+
+                                <option value="excelente">
+                                    Excelente
+                                </option>
+
+                                <option value="satisfactorio">
+                                    Satisfactorio
+                                </option>
+
+                                <option value="proceso">
+                                    En proceso
+                                </option>
+
+                                <option value="insuficiente">
+                                    Insuficiente
+                                </option>
+
+                            </select>
+
+                        </td>
+
+                        <td id="puntaje-control">
+                            0.00
+                        </td>
+
+                        <td>
+
+                            <input
+                                type="text"
+                                id="observacion-control"
+                                name="observacion-control"
+                            >
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Variables, operadores y fórmulas
+                        </td>
+
+                        <td>
+                            1.5
+                        </td>
+
+                        <td>
+
+                            <select
+                                id="nivel-variables"
+                                name="nivel-variables"
+                            >
+
+                                <option value="">
+                                    Seleccione...
+                                </option>
+
+                                <option value="excelente">
+                                    Excelente
+                                </option>
+
+                                <option value="satisfactorio">
+                                    Satisfactorio
+                                </option>
+
+                                <option value="proceso">
+                                    En proceso
+                                </option>
+
+                                <option value="insuficiente">
+                                    Insuficiente
+                                </option>
+
+                            </select>
+
+                        </td>
+
+                        <td id="puntaje-variables">
+                            0.00
+                        </td>
+
+                        <td>
+
+                            <input
+                                type="text"
+                                id="observacion-variables"
+                                name="observacion-variables"
+                            >
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Claridad del pseudocódigo
+                        </td>
+
+                        <td>
+                            1.0
+                        </td>
+
+                        <td>
+
+                            <select
+                                id="nivel-claridad"
+                                name="nivel-claridad"
+                            >
+
+                                <option value="">
+                                    Seleccione...
+                                </option>
+
+                                <option value="excelente">
+                                    Excelente
+                                </option>
+
+                                <option value="satisfactorio">
+                                    Satisfactorio
+                                </option>
+
+                                <option value="proceso">
+                                    En proceso
+                                </option>
+
+                                <option value="insuficiente">
+                                    Insuficiente
+                                </option>
+
+                            </select>
+
+                        </td>
+
+                        <td id="puntaje-claridad">
+                            0.00
+                        </td>
+
+                        <td>
+
+                            <input
+                                type="text"
+                                id="observacion-claridad"
+                                name="observacion-claridad"
+                            >
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Prueba de escritorio y validación
+                        </td>
+
+                        <td>
+                            1.0
+                        </td>
+
+                        <td>
+
+                            <select
+                                id="nivel-prueba"
+                                name="nivel-prueba"
+                            >
+
+                                <option value="">
+                                    Seleccione...
+                                </option>
+
+                                <option value="excelente">
+                                    Excelente
+                                </option>
+
+                                <option value="satisfactorio">
+                                    Satisfactorio
+                                </option>
+
+                                <option value="proceso">
+                                    En proceso
+                                </option>
+
+                                <option value="insuficiente">
+                                    Insuficiente
+                                </option>
+
+                            </select>
+
+                        </td>
+
+                        <td id="puntaje-prueba">
+                            0.00
+                        </td>
+
+                        <td>
+
+                            <input
+                                type="text"
+                                id="observacion-prueba"
+                                name="observacion-prueba"
+                            >
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Presentación y cumplimiento
+                        </td>
+
+                        <td>
+                            0.5
+                        </td>
+
+                        <td>
+
+                            <select
+                                id="nivel-presentacion"
+                                name="nivel-presentacion"
+                            >
+
+                                <option value="">
+                                    Seleccione...
+                                </option>
+
+                                <option value="excelente">
+                                    Excelente
+                                </option>
+
+                                <option value="satisfactorio">
+                                    Satisfactorio
+                                </option>
+
+                                <option value="proceso">
+                                    En proceso
+                                </option>
+
+                                <option value="insuficiente">
+                                    Insuficiente
+                                </option>
+
+                            </select>
+
+                        </td>
+
+                        <td id="puntaje-presentacion">
+                            0.00
+                        </td>
+
+                        <td>
+
+                            <input
+                                type="text"
+                                id="observacion-presentacion"
+                                name="observacion-presentacion"
+                            >
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+        <section>
+
+            <h2>Resultado de la evaluación</h2>
+
+            <div>
+                <p>
+                    Nota final:
+                    <strong id="nota-final">
+                        0.00 / 10
+                    </strong>
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    Nivel de desempeño:
+                    <strong id="nivel-global">
+                        Sin evaluar
+                    </strong>
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- OBSERVACIONES GENERALES -->
+        <section>
+
+            <h2>Observaciones generales</h2>
+
+            <textarea
+                id="observaciones-generales"
+                name="observaciones-generales"
+                rows="6"
+                placeholder="Ingrese las observaciones generales de la evaluación"
+            ></textarea>
+
+        </section>
+
+
+        <!-- BOTONES -->
+        <section>
+
+            <button
+                type="button"
+                id="btn-calcular"
+            >
+                Calcular nota
+            </button>
+
+            <button
+                type="button"
+                id="btn-limpiar"
+            >
+                Nueva evaluación
+            </button>
+
+            <button
+                type="button"
+                id="btn-pdf"
+            >
+                Generar PDF
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Fundamentos de Programación
+        </p>
+
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
